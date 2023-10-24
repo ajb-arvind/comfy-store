@@ -47,7 +47,6 @@ export const loader =
         meta: response.data.meta,
       };
     } catch (error) {
-      console.log(error);
       const errorMessage =
         error?.response?.data?.error?.message ||
         'there was an error accessing your orders';
@@ -62,7 +61,6 @@ export const loader =
 const Orders = () => {
   const { orders, meta } = useLoaderData();
 
-  console.log(orders, meta);
   if (meta.pagination.total) {
     <SectionTitle text="Please make an order" />;
   }

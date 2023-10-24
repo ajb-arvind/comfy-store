@@ -59,11 +59,15 @@ const ComplexPaginationContainer = () => {
         </button>
       );
     }
-
-    // last button
-    pageButtons.push(
-      addPageButton({ pageNumber: pageCount, activeClass: page === pageCount })
-    );
+    if (pageCount > 2) {
+      // last button
+      pageButtons.push(
+        addPageButton({
+          pageNumber: pageCount,
+          activeClass: page === pageCount,
+        })
+      );
+    }
     return pageButtons;
   };
 

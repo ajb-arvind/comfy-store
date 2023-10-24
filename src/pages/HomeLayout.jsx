@@ -5,7 +5,6 @@ import Loading from '../components/Loading';
 
 const HomeLayout = () => {
   const navigation = useNavigation();
-
   const isLoading = navigation.state === 'loading';
 
   return (

@@ -101,7 +101,7 @@ const SingleProduct = () => {
           <div className="form-control w-full max-w-xs">
             <label className="label">
               <h4 className="text-md font-medium tracking-wider capitalize">
-                amount
+                Quantity
               </h4>
             </label>
             <select
@@ -115,7 +115,7 @@ const SingleProduct = () => {
           {/* Cart */}
           <div className="mt-10">
             <button className="btn btn-secondary btn-md" onClick={addToCart}>
-              Add to bag
+              Add to cart
             </button>
           </div>
         </div>

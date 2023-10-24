@@ -53,7 +53,7 @@ const CartItem = ({ cartItem }) => {
       <div className="sm:ml-12">
         <div className="form-control max-w-xs">
           <label htmlFor="amount" className="label p-0">
-            <span className="label-text">Amount</span>
+            <span className="label-text">Quantity</span>
           </label>
           <select
             name="amount"

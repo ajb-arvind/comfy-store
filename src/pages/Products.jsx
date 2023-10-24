@@ -1,5 +1,7 @@
 import { customFetch } from '../utils';
 import { Filters, ProductsContainer, PaginationContainer } from '../components';
+import { useState } from 'react';
+import { FaFilter } from 'react-icons/fa';
 
 const url = '/products';
 
@@ -39,10 +41,24 @@ export const loader =
   };
 
 const Products = () => {
+  const [showFilter, setShowFilter] = useState(false);
+
+  const handleFilterShow = () => {
+    setShowFilter(!showFilter);
+  };
+
   return (
     <>
-      <Filters />
-      <ProductsContainer />
+      <div className="flex justify-end">
+        <button
+          className="btn btn-accent btn-sm sm:mb-10"
+          onClick={handleFilterShow}
+        >
+          Filter {<FaFilter />}
+        </button>
+      </div>
+      {showFilter ? <Filters /> : ''}
+      <ProductsContainer/>
       <PaginationContainer />
     </>
   );
